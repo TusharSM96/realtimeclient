@@ -10,7 +10,7 @@ export const SocketClientWrapper = ({ children }) => {
 
   useEffect(() => {
     // Initialize socket client
-    const socket = io("http://localhost:8080", {
+    const socket = io("https://realtimechatbacked.vercel.app") {
       query: {
         userId: UserDataHook?.userData?._id,
         email: UserDataHook?.userData?.email,
