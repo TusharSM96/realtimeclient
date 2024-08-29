@@ -298,9 +298,7 @@
   .navbar-toggler-icon {
     font-size: 10px;
   }
-  .form-control {
-    width: 150px !important;
-  }
+ 
 }
 @media only screen and (max-height: 470px) {
   .navbarmy {
