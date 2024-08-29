@@ -8,6 +8,9 @@ export const SocketClientWrapper = ({ children }) => {
   useEffect(() => {
     // Initialize socket client
     const socket = io("https://realtimechatbacked.vercel.app", {
+      reconnection: true,
+      reconnectionAttempts: Infinity,
+      reconnectionDelay: 1000,
       query: {
         userId: UserDataHook?.userData?._id,
         email: UserDataHook?.userData?.email,
