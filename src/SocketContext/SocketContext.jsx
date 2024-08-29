@@ -1,16 +1,13 @@
 import { createContext, useContext, useEffect, useState } from "react";
 import io from "socket.io-client";
 import { UserDataContext } from "../Middlewer/AuthWrapper";
-
 export const SocketClientContext = createContext(null);
-
 export const SocketClientWrapper = ({ children }) => {
   const [SocketClient, setSocketClient] = useState(null);
   const { UserDataHook, setUserDataHook } = useContext(UserDataContext);
-
   useEffect(() => {
     // Initialize socket client
-    const socket = io("https://realtimechatbacked.vercel.app") {
+    const socket = io("https://realtimechatbacked.vercel.app", {
       query: {
         userId: UserDataHook?.userData?._id,
         email: UserDataHook?.userData?.email,
