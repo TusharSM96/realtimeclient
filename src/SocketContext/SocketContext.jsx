@@ -8,8 +8,8 @@ export const SocketClientWrapper = ({ children }) => {
   useEffect(() => {
     // Initialize socket client
     // const socket = io("https://realtimechatbacked.vercel.app", {
-    const socket = io("https://realtimechatbacked.onrender.com", {
-    // const socket = io("http://localhost:8080", {
+      // const socket = io("http://localhost:8080", {
+        const socket = io("https://realtimechatbacked.onrender.com", {
       transports: ["websocket"], // Use WebSocket transport
       reconnection: true,
       reconnectionAttempts: Infinity,
